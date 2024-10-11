@@ -9,7 +9,7 @@ COPY requirements.txt .
 
 
 # Instala las dependencias necesarias
-RUN pip install --no-cache-dir -r requirements.txt\
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Copia todos los archivos al contenedor
 COPY . .
