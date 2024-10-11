@@ -1,0 +1,51 @@
+$ docker exec -it mongo_c bash
+$ mongosh
+
+
+# Ingresar a la base de datos deseada
+use sistema_biblioteca
+
+# Crear la colección Editorial
+db.createCollection("Editorial")
+
+# Insertar documentos en la colección Editorial
+# Insertar documentos en la colección Editorial
+db.Editorial.insertMany([
+    { ID: 1, nombre: "Editorial Alpha", libros_publicados: [101, 102] },
+    { ID: 2, nombre: "Editorial Beta", libros_publicados: [103, 104] },
+    { ID: 3, nombre: "Editorial Gamma", libros_publicados: [105] },
+    { ID: 4, nombre: "Editorial Delta", libros_publicados: [106, 107] },
+    { ID: 5, nombre: "Editorial Épsilon", libros_publicados: [108, 109] },
+    { ID: 6, nombre: "Editorial Zeta", libros_publicados: [110, 111] },
+    { ID: 7, nombre: "Editorial Eta", libros_publicados: [112] },
+    { ID: 8, nombre: "Editorial Theta", libros_publicados: [113, 114] },
+    { ID: 9, nombre: "Editorial Iota", libros_publicados: [115, 116] },
+    { ID: 10, nombre: "Editorial Kappa", libros_publicados: [117] }
+])
+
+
+# Crear la colección Editorial_data
+db.createCollection("Editorial_data")
+
+# Insertar documentos en la colección Editorial
+db.Editorial_data.insertMany([
+    { editorial_ID: 1, fecha_registro: new Date("2020-01-01"), RUC: "123456789", correo_electronico: "contacto@editorialalpha.com", pais_origen: "USA" },
+    { editorial_ID: 2, fecha_registro: new Date("2019-05-15"), RUC: "987654321", correo_electronico: "contacto@editorialbeta.com", pais_origen: "Italia" },
+    { editorial_ID: 3, fecha_registro: new Date("2021-10-30"), RUC: "192837465", correo_electronico: "contacto@editorialgamma.com", pais_origen: "Malasia" },
+    { editorial_ID: 4, fecha_registro: new Date("2022-01-01"), RUC: "123456780", correo_electronico: "contacto@editorialdelta.com", pais_origen: "USA" },
+    { editorial_ID: 5, fecha_registro: new Date("2022-02-15"), RUC: "987654320", correo_electronico: "contacto@editorialepsilon.com", pais_origen: "Italia" },
+    { editorial_ID: 6, fecha_registro: new Date("2022-03-30"), RUC: "192837460", correo_electronico: "contacto@editorialzeta.com", pais_origen: "Malasia" },
+    { editorial_ID: 7, fecha_registro: new Date("2022-04-10"), RUC: "123456781", correo_electronico: "contacto@editorialeta.com", pais_origen: "España" },
+    { editorial_ID: 8, fecha_registro: new Date("2022-05-20"), RUC: "987654322", correo_electronico: "contacto@editorialtheta.com", pais_origen: "Francia" },
+    { editorial_ID: 9, fecha_registro: new Date("2022-06-25"), RUC: "192837461", correo_electronico: "contacto@editorialiota.com", pais_origen: "Reino Unido" },
+    { editorial_ID: 10, fecha_registro: new Date("2022-07-30"), RUC: "123456782", correo_electronico: "contacto@editorialkappa.com", pais_origen: "Alemania" }
+])
+
+
+
+
+db.editorial.find().pretty()
+db.Editorial_data.find().pretty()
+
+
+exit

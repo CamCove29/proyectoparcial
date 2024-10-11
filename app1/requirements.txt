@@ -1,0 +1,6 @@
+Flask>=2.0
+Jinja2==3.0.1
+MarkupSafe==2.0.1
+mysql-connector-python
+fastapi
+uvicorn
