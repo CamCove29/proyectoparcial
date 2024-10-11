@@ -1,9 +1,6 @@
 -- Crear la base de datos
 CREATE DATABASE db_clients;
 
--- Conectarse a la base de datos (esto se debe hacer desde la línea de comandos o desde el cliente de PostgreSQL, no en el script SQL)
-USE db_clients;
-
 -- Crear la tabla de Clientes
 CREATE TABLE IF NOT EXISTS Clientes (
     ID_cliente SERIAL PRIMARY KEY,
