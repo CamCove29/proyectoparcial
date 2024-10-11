@@ -10,10 +10,6 @@ COPY requirements.txt .
 
 # Instala las dependencias necesarias
 RUN pip install --no-cache-dir -r requirements.txt\
-    && pip3 install pydantic \
-    && pip3 install "fastapi[standard]" \
-    && pip3 install pydantic \
-    && pip3 install psycopg2-binary
 
 # Copia todos los archivos al contenedor
 COPY . .
