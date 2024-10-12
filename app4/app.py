@@ -5,9 +5,9 @@ import httpx
 app = FastAPI()
 
 # URLs de las tres APIs
-LIBROS_API_URL = "http://proyecto-cloud-1714451405.us-east-1.elb.amazonaws.com:8080/docs"
-USUARIOS_API_URL = "http://proyecto-cloud-1714451405.us-east-1.elb.amazonaws.com:8002/docs"
-EDITORIALES_API_URL = "http://proyecto-cloud-1714451405.us-east-1.elb.amazonaws.com:8083/docs"
+LIBROS_API_URL = "54.204.121.252:8080/docs"
+USUARIOS_API_URL = "54.204.121.252:8002/docs"
+EDITORIALES_API_URL = "54.204.121.252:8083/docs"
 
 
 
